@@ -1,0 +1,83 @@
+* {
+  outline: none !important;
+}
+body {
+  text-align: center;
+  background-image: url(./pics/cyborg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.page-wrapper {
+  width: 1280px;
+  text: left;
+  display: inline-block;
+}
+.playlist-wrapper {
+  display: flex;
+}
+.playlist-child-videos {
+  display: flex;
+  flex-direction: row;
+}
+.playlist-item-wrapper {
+  display: inline-block;
+}
+.playlist-child-videos {
+  overflow: auto;
+  height: 100%;
+}
+.playlist-item-wrapper {
+  margin: 10px;
+  margin-left: 0 !important;
+  padding: 10px;
+  max-width: 320px;
+}
+.playlist-thumb {
+  position: relative;
+}
+.playlist-thumb img {
+  width: 320px;
+}
+.playlist-meta-length {
+  font-weight: bold;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 3;
+  background-color: rgba(0,0,0,.7);
+  color: #fff;
+  padding: 0 10px;
+  border-radius: 3px;
+}
+.playlist-item-wrapper[data-playing="true"] .playlist-thumb img {
+  opacity: 0.5;
+}
+.playlist-item-wrapper[data-live="true"] .playlist-meta-length {
+  color: #dd3333;
+}
+.playlist-item-wrapper[data-live="true"] .playlist-meta-length:before {
+  border-radius: 100%;
+  margin-right: 5px;
+  animation: blink 1300ms 0s ease infinite;
+  content: "•";
+  display: inline-block;
+  vertical-align: middle;
+}
+.playlist-item-wrapper .playlist-meta-length > span {
+  display: inline-block;
+  vertical-align: middle;
+}
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
