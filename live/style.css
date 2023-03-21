@@ -3,13 +3,12 @@
 }
 body {
   text-align: center;
-  background-image: url(./pics/cyborg.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 }
 .page-wrapper {
   width: 1280px;
-  text: left;
+ 
   display: inline-block;
 }
 .playlist-wrapper {
